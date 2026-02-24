@@ -17,11 +17,11 @@
             const progress = Math.max(0, Math.min(1, visiblePercent));
             
             // Движение фото (от -10% до +10%)
-            const imageShift = 20 * (progress - 0.5);
+            const imageShift = 25 * (progress - 0.5);
             image.style.transform = `translateY(${imageShift}%)`;
             
             // Движение текста (выезжает снизу)
-            const textShift = 30 * (1 - progress);
+            const textShift = 35 * (1 - progress);
             text.style.transform = `translateY(${textShift}px)`;
             
             ticking = false;
