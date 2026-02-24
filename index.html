@@ -1,348 +1,18 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Свадьба Василия и Варвары | Отель Милан</title>
-    <!-- Шрифты -->
+    <!-- Подключение шрифтов -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #F5F0EB;
-            font-family: 'Montserrat', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-            line-height: 1.5;
-            color: #3a2e28;
-        }
-
-        .invitation-card {
-            max-width: 600px;
-            width: 100%;
-            background-color: #ffffff;
-            border-radius: 28px;
-            box-shadow: 0 20px 40px -12px rgba(0,0,0,0.25);
-            overflow: hidden;
-            border: 1px solid rgba(229,207,184,0.5);
-        }
-
-        .card-header {
-            height: 12px;
-            background: linear-gradient(90deg, #354A11, #6D7F4F, #E5CFB8, #DD9FAF, #F6CBD5);
-            background-size: 300% 100%;
-            animation: gradientShift 8s ease infinite;
-        }
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .card-content {
-            padding: 40px 30px 30px;
-        }
-
-        h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 600;
-            font-size: 2.6rem;
-            letter-spacing: 1px;
-            color: #354A11;
-            margin-bottom: 10px;
-            line-height: 1.2;
-            text-align: center;
-        }
-
-        .inviters {
-            text-align: center;
-            font-weight: 400;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #6D7F4F;
-            margin-bottom: 30px;
-            border-bottom: 1px dashed #E5CFB8;
-            padding-bottom: 20px;
-            word-spacing: 4px;
-        }
-        .inviters i {
-            color: #DD9FAF;
-            margin: 0 6px;
-            font-size: 1rem;
-        }
-
-        /* НОВЫЙ БЛОК С ФОТО */
-        .photo-frame {
-            margin: 20px 0 30px;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 12px 24px -10px rgba(53,74,17,0.3);
-            border: 2px solid #F6CBD5;
-            aspect-ratio: 4 / 3; /* аккуратное соотношение, чтобы фото не ломалось */
-            background-color: #E5CFB8; /* фон, пока фото не загружено */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .photo-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* фото заполнит рамку красиво */
-            display: block;
-        }
-
-        .photo-placeholder {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #604B30;
-            font-size: 0.9rem;
-            text-align: center;
-            padding: 20px;
-            background: #f9eee7;
-            width: 100%;
-            height: 100%;
-        }
-        .photo-placeholder i {
-            font-size: 3rem;
-            color: #DD9FAF;
-            margin-bottom: 8px;
-        }
-        /* маленькая подсказка для фото */
-        .photo-hint {
-            text-align: center;
-            font-size: 0.8rem;
-            color: #6D7F4F;
-            margin-top: -15px;
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-
-        .detail-block {
-            margin: 35px 0 20px;
-            padding: 10px 0;
-        }
-
-        .detail-item {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 25px;
-            border-left: 3px solid #F6CBD5;
-            padding-left: 20px;
-        }
-
-        .detail-icon {
-            width: 44px;
-            height: 44px;
-            background-color: #F6CBD5;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #604B30;
-            font-size: 1.4rem;
-        }
-
-        .detail-text {
-            flex: 1;
-        }
-
-        .detail-text .label {
-            font-size: 0.8rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #6D7F4F;
-        }
-
-        .detail-text .value {
-            font-weight: 600;
-            font-size: 1.25rem;
-            color: #354A11;
-        }
-
-        .value small {
-            font-size: 0.95rem;
-            font-weight: 400;
-            color: #604B30;
-        }
-
-        .hotel-address {
-            font-size: 0.95rem;
-            color: #604B30;
-            margin-top: 5px;
-            font-style: italic;
-        }
-
-        .colors-section {
-            background-color: #FAF6F2;
-            border-radius: 40px 40px 20px 20px;
-            padding: 30px 20px;
-            margin: 35px 0;
-            text-align: center;
-            border: 1px solid #E5CFB8;
-        }
-
-        .section-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            font-weight: 600;
-            color: #354A11;
-            margin-bottom: 20px;
-        }
-
-        .color-palette {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px 25px;
-            margin-top: 20px;
-        }
-
-        .color-chip {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .color-circle {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            box-shadow: 0 5px 10px rgba(53,74,17,0.2);
-            border: 3px solid white;
-        }
-
-        .color-name {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #354A11;
-            letter-spacing: 0.5px;
-            background: rgba(255,255,240,0.7);
-            padding: 4px 10px;
-            border-radius: 40px;
-        }
-
-        .color-description {
-            margin-top: 20px;
-            font-size: 0.95rem;
-            color: #604B30;
-            background: #E5CFB8;
-            padding: 10px 18px;
-            border-radius: 40px;
-            display: inline-block;
-        }
-
-        .links-section {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin: 40px 0 20px;
-        }
-
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            padding: 18px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.1rem;
-            transition: all 0.2s ease;
-            border: 1px solid transparent;
-        }
-
-        .btn-primary {
-            background-color: #354A11;
-            color: white;
-            box-shadow: 0 8px 16px -6px #354A11;
-        }
-
-        .btn-primary:hover {
-            background-color: #1F2E0A;
-            transform: scale(1.02);
-        }
-
-        .btn-secondary {
-            background-color: #F6CBD5;
-            color: #354A11;
-            border: 1px solid #DD9FAF;
-        }
-
-        .btn-secondary:hover {
-            background-color: #f5b8c7;
-            border-color: #604B30;
-            color: #1F2E0A;
-        }
-
-        .btn i {
-            font-size: 1.2rem;
-            width: 24px;
-            color: #604B30;
-        }
-        .btn-primary i {
-            color: #E5CFB8;
-        }
-
-        .footnote {
-            text-align: center;
-            margin-top: 35px;
-            font-size: 0.85rem;
-            color: #6D7F4F;
-            border-top: 1px dashed #DD9FAF;
-            padding-top: 20px;
-        }
-
-        .heart {
-            color: #DD9FAF;
-            margin: 0 4px;
-        }
-
-        .wishlist-note {
-            font-size: 0.9rem;
-            text-align: center;
-            margin-top: 10px;
-        }
-        .wishlist-note a {
-            color: #604B30;
-            text-decoration: underline wavy #DD9FAF 1.5px;
-            font-weight: 500;
-        }
-        .wishlist-note a:hover {
-            color: #354A11;
-        }
-
-        @media (max-width: 480px) {
-            .card-content {
-                padding: 30px 20px;
-            }
-            h1 {
-                font-size: 2.2rem;
-            }
-            .inviters {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <!-- Подключение внешнего CSS файла -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="invitation-card">
@@ -351,32 +21,24 @@
             <h1>Дорогие гости!</h1>
             <div class="inviters">
                 <i class="fas fa-rings"></i> ПРИГЛАШАЮТ НА СВАДЬБУ <i class="fas fa-rings"></i><br>
-                <span style="font-weight:600; font-size:1.3rem;">Василий & Варвара</span>
+                <span class="couple-names">Василий & Варвара</span>
             </div>
 
-            <!-- ФОТОГРАФИЯ (перед датой) -->
-            <div class="photo-frame" id="photoFrame">
-                <!-- Прямо сейчас стоит плейсхолдер. Чтобы вставить фото с Google Диска:
-                     1. Откройте доступ к файлу на диске (по ссылке)
-                     2. Скопируйте ID файла и вставьте в src ниже вместо "YOUR_GOOGLE_DRIVE_IMAGE_ID" 
-                -->
-                <img src="https://drive.google.com/thumbnail?id=1_dVKmRgKryKizQWWv1Pqh2Bf3siDatCb&sz=w1000" 
-                     alt="Василий и Варвара" 
-                     style="display:none;"
-                     onload="this.style.display='block'; document.getElementById('photoPlaceholder').style.display='none';"
-                     onerror="this.style.display='none'; document.getElementById('photoPlaceholder').style.display='flex';">
-                <div class="photo-placeholder" id="photoPlaceholder">
-                    <i class="fas fa-camera"></i>
-                    <span>здесь будет фото пары</span>
-                    <span style="font-size:0.7rem; margin-top:8px;">(вставьте ссылку с Google Диска)</span>
+            <!-- КОНТЕЙНЕР С ПАРАЛЛАКСОМ -->
+            <div class="parallax-container" id="parallaxContainer">
+                <!-- Фото с эффектом параллакса -->
+                <div class="parallax-image" id="parallaxImage" style="background-image: url('https://drive.google.com/thumbnail?id=YOUR_GOOGLE_DRIVE_IMAGE_ID&sz=w1000');"></div>
+                <!-- Затемнение -->
+                <div class="parallax-overlay"></div>
+                <!-- Текст на фото -->
+                <div class="parallax-text" id="parallaxText">
+                    <div class="big-date">17.07.2026</div>
+                    <div class="venue"><i class="fas fa-map-pin"></i> Отель «МИЛАН», Шипиловская 28А</div>
+                    <div class="time-info"><i class="fas fa-clock"></i> сбор в 17:30</div>
                 </div>
             </div>
-            <!-- крошечная инструкция прямо под фото -->
-            <div class="photo-hint">
-                <i class="fas fa-image"></i> замените <code>YOUR_GOOGLE_DRIVE_IMAGE_ID</code> в коде на ID файла с Google Диска
-            </div>
 
-            <!-- Дата, время, место (как и раньше) -->
+            <!-- Детали события (дублирование для удобства, но можно оставить) -->
             <div class="detail-block">
                 <div class="detail-item">
                     <div class="detail-icon"><i class="fas fa-calendar-alt"></i></div>
@@ -405,7 +67,7 @@
             <!-- Цветовая палитра -->
             <div class="colors-section">
                 <div class="section-title">палитра торжества</div>
-                <p style="margin-bottom: 5px; color:#604B30;">Вдохновляйтесь оттенками нашего праздника:</p>
+                <p class="palette-intro">Вдохновляйтесь оттенками нашего праздника:</p>
                 <div class="color-palette">
                     <div class="color-chip">
                         <div class="color-circle" style="background-color: #354A11;"></div>
@@ -433,11 +95,11 @@
                     </div>
                 </div>
                 <div class="color-description">
-                    <i class="fas fa-feather" style="margin-right:6px;"></i> Выбирайте любые сочетания этих цветов.
+                    <i class="fas fa-feather"></i> Выбирайте любые сочетания этих цветов.
                 </div>
             </div>
 
-            <!-- Кнопки ссылок -->
+            <!-- Кнопки-ссылки -->
             <div class="links-section">
                 <a href="#" class="btn btn-primary" target="_blank" rel="noopener noreferrer" id="rsvp-link">
                     <i class="fas fa-check-circle"></i> Ответить на приглашение (RSVP)
@@ -447,48 +109,25 @@
                 </a>
             </div>
 
-            <!-- Подсказка заменить ссылки (можно удалить после замены) -->
-            <div class="wishlist-note" style="background:#f3ede7; border-radius:30px; padding:6px 12px;">
-                <span style="font-size:0.8rem;">
-                    <i class="fas fa-pencil-alt" style="margin-right:5px;"></i> 
-                    🔗 Замените <code>#</code> в кнопках на ссылки (гугл-форма и вишлист)
-                </span>
+            <!-- Подсказки по замене (можно удалить после настройки) -->
+            <div class="hint-box">
+                <div class="hint-item">
+                    <i class="fas fa-pencil-alt"></i> 
+                    <span>Замените <code>#</code> в кнопках на ссылки (гугл-форма и вишлист)</span>
+                </div>
+                <div class="hint-item">
+                    <i class="fas fa-image"></i> 
+                    <span>Замените <code>YOUR_GOOGLE_DRIVE_IMAGE_ID</code> на ID фото</span>
+                </div>
             </div>
 
             <div class="footnote">
                 <i class="fas fa-heart heart"></i> Ждём вас, чтобы разделить этот день <i class="fas fa-heart heart"></i>
             </div>
-        </div> <!-- end card-content -->
-    </div> <!-- end invitation-card -->
+        </div>
+    </div>
 
-    <script>
-        (function() {
-            // подсказки по замене ссылок
-            const rsvp = document.getElementById('rsvp-link');
-            const wish = document.getElementById('wishlist-link');
-            
-            if (rsvp && rsvp.getAttribute('href') === '#') {
-                rsvp.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    alert('🔗 Вставьте ссылку на Google Форму (опрос "приду/не приду").\n\nНайдите href="#" у кнопки RSVP и замените на актуальный URL.');
-                });
-            }
-            if (wish && wish.getAttribute('href') === '#') {
-                wish.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    alert('🎁 Добавьте ссылку на вишлист в атрибут href.\n\nПример: href="https://example.com/wishlist"');
-                });
-            }
-
-            // Дополнительно: проверка фото
-            const photoImg = document.querySelector('.photo-frame img');
-            const placeholder = document.getElementById('photoPlaceholder');
-            // если картинка уже загрузилась (но обычно ID невалидный, поэтому показано будет сообщение)
-            if (photoImg) {
-                // если изображение не загрузилось, placeholder уже виден (стили inline)
-                // все ок, логика в onload/onerror
-            }
-        })();
-    </script>
+    <!-- Подключение внешнего JavaScript файла -->
+    <script src="script.js"></script>
 </body>
 </html>
