@@ -1,0 +1,78 @@
+// script.js
+(function() {
+    // === ПАРАЛЛАКС ЭФФЕКТ ===
+    const container = document.getElementById('parallaxContainer');
+    const image = document.getElementById('parallaxImage');
+    const text = document.getElementById('parallaxText');
+    
+    if (container && image && text) {
+        let ticking = false;
+        
+        function updateParallax() {
+            const rect = container.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            // Насколько контейнер виден (0 - 1)
+            const visiblePercent = (windowHeight - rect.top) / (windowHeight + rect.height);
+            const progress = Math.max(0, Math.min(1, visiblePercent));
+            
+            // Движение фото (от -10% до +10%)
+            const imageShift = 20 * (progress - 0.5);
+            image.style.transform = `translateY(${imageShift}%)`;
+            
+            // Движение текста (выезжает снизу)
+            const textShift = 30 * (1 - progress);
+            text.style.transform = `translateY(${textShift}px)`;
+            
+            ticking = false;
+        }
+        
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(updateParallax);
+                ticking = true;
+            }
+        });
+        
+        window.addEventListener('resize', function() {
+            window.requestAnimationFrame(updateParallax);
+        });
+        
+        updateParallax();
+    }
+
+    // === ОБРАБОТКА ССЫЛОК-ЗАГЛУШЕК ===
+    const rsvp = document.getElementById('rsvp-link');
+    const wish = document.getElementById('wishlist-link');
+    
+    if (rsvp && rsvp.getAttribute('href') === '#') {
+        rsvp.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('🔗 Вставьте ссылку на Google Форму (опрос "приду/не приду").\n\nНайдите href="#" у кнопки RSVP и замените на актуальный URL.');
+        });
+    }
+    
+    if (wish && wish.getAttribute('href') === '#') {
+        wish.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('🎁 Добавьте ссылку на вишлист в атрибут href.\n\nПример: href="https://example.com/wishlist"');
+        });
+    }
+
+    // === ПРОВЕРКА ЗАГРУЗКИ ФОТО (опционально) ===
+    const photoDiv = document.getElementById('parallaxImage');
+    if (photoDiv) {
+        const bgImage = new Image();
+        const bgUrl = window.getComputedStyle(photoDiv).backgroundImage.slice(5, -2);
+        if (bgUrl && bgUrl.includes('YOUR_GOOGLE_DRIVE_IMAGE_ID')) {
+            // Ничего не делаем, фото не заменили — оставляем как есть
+        } else if (bgUrl) {
+            bgImage.src = bgUrl;
+            bgImage.onerror = function() {
+                photoDiv.style.backgroundColor = '#604B30';
+                photoDiv.style.backgroundImage = 'none';
+                console.log('Не удалось загрузить фото с Google Диска');
+            };
+        }
+    }
+})();
