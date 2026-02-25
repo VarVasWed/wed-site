@@ -75,4 +75,39 @@
             };
         }
     }
+    // ДОБАВЬТЕ ЭТОТ КОД В ФАЙЛ script.js (внутри основного блока (function() { ... }) )
+
+    // === ОБРАТНЫЙ ОТСЧЕТ ДО СВАДЬБЫ ===
+    function updateCountdown() {
+        // Дата свадьбы: 17 июля 2026, 17:30
+        const weddingDate = new Date(2026, 6, 17, 17, 30, 0); // Месяцы в JS от 0: 6 = июль
+        
+        const now = new Date();
+        const diff = weddingDate - now;
+        
+        if (diff <= 0) {
+            // Если дата уже прошла
+            document.getElementById('days').textContent = '00';
+            document.getElementById('hours').textContent = '00';
+            document.getElementById('minutes').textContent = '00';
+            document.getElementById('seconds').textContent = '00';
+            return;
+        }
+        
+        // Расчет дней, часов, минут, секунд
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        
+        // Обновление DOM с добавлением ведущего нуля
+        document.getElementById('days').textContent = days.toString().padStart(2, '0');
+        document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    }
+    
+    // Запускаем таймер и обновляем каждую секунду
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
 })();
