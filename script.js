@@ -21,8 +21,15 @@
             image.style.transform = `translateY(${imageShift}%)`;
             
             // Движение текста (выезжает снизу)
-            const textShift = 35 * (1 - progress);
+            const textShift = 30 * (1 - progress);
             text.style.transform = `translateY(${textShift}px)`;
+
+            // Добавьте движение для календаря (если элемент существует)
+            const calendarOverlay = document.getElementById('calendarOverlay');
+            if (calendarOverlay) {
+                const calendarShift = 20 * (1 - progress);
+                calendarOverlay.style.transform = `translateY(${calendarShift}px)`;
+            }
             
             ticking = false;
         }

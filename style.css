@@ -35,9 +35,17 @@ body {
 }
 
 @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .card-content {
@@ -68,23 +76,23 @@ h1 {
     word-spacing: 4px;
 }
 
-.inviters i {
-    color: #DD9FAF;
-    margin: 0 6px;
-    font-size: 1rem;
-}
+    .inviters i {
+        color: #DD9FAF;
+        margin: 0 6px;
+        font-size: 1rem;
+    }
 
 .couple-names {
     font-weight: 600;
     font-size: 1.3rem;
 }
 
-/* Параллакс контейнер */
+/* ÐŸÐ°Ñ€Ð°Ð»Ð»Ð°ÐºÑ ÐºÐ¾Ð½Ñ‚ÐµÐ¹Ð½ÐµÑ€ */
 .parallax-container {
     position: relative;
-    width: 100%;
-    margin: 20px 0 30px;
-    border-radius: 24px;
+    width: 111%;
+    margin: 20px -30px 30px;
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 12px 24px -10px rgba(53, 74, 17, 0.3);
     border: 2px solid #F6CBD5;
@@ -96,7 +104,7 @@ h1 {
     top: -30px;
     left: 0;
     width: 100%;
-    height: 120%;
+    height: 130%;
     background-size: cover;
     background-position: center 100%;
     background-repeat: no-repeat;
@@ -129,38 +137,38 @@ h1 {
     transition: transform 0.2s ease-out;
 }
 
-.parallax-text .big-date {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3.2rem;
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 5px;
-    color: #F6CBD5;
-    text-shadow: 2px 2px 0 #354A11;
-}
+    .parallax-text .big-date {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 5px;
+        color: #F6CBD5;
+        text-shadow: 2px 2px 0 #354A11;
+    }
 
-.parallax-text .venue {
-    font-size: 1.2rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-}
+    .parallax-text .venue {
+        font-size: 1.2rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
 
-.parallax-text .venue i {
-    margin-right: 6px;
-    color: #E5CFB8;
-}
+        .parallax-text .venue i {
+            margin-right: 6px;
+            color: #E5CFB8;
+        }
 
-.parallax-text .time-info {
-    font-size: 1.2rem;
-    margin-top: 6px;
-}
+    .parallax-text .time-info {
+        font-size: 1.2rem;
+        margin-top: 6px;
+    }
 
-.parallax-text .time-info i {
-    margin-right: 4px;
-    color: #E5CFB8;
-}
+        .parallax-text .time-info i {
+            margin-right: 4px;
+            color: #E5CFB8;
+        }
 
-/* Детали события */
+/* Ð”ÐµÑ‚Ð°Ð»Ð¸ ÑÐ¾Ð±Ñ‹Ñ‚Ð¸Ñ */
 .detail-block {
     margin: 35px 0 20px;
     padding: 10px 0;
@@ -191,19 +199,19 @@ h1 {
     flex: 1;
 }
 
-.detail-text .label {
-    font-size: 0.8rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #6D7F4F;
-}
+    .detail-text .label {
+        font-size: 0.8rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #6D7F4F;
+    }
 
-.detail-text .value {
-    font-weight: 600;
-    font-size: 1.25rem;
-    color: #354A11;
-}
+    .detail-text .value {
+        font-weight: 600;
+        font-size: 1.25rem;
+        color: #354A11;
+    }
 
 .value small {
     font-size: 0.95rem;
@@ -218,7 +226,7 @@ h1 {
     font-style: italic;
 }
 
-/* Цветовая палитра */
+/* Ð¦Ð²ÐµÑ‚Ð¾Ð²Ð°Ñ Ð¿Ð°Ð»Ð¸Ñ‚Ñ€Ð° */
 .colors-section {
     background-color: #FAF6F2;
     border-radius: 40px 40px 20px 20px;
@@ -284,11 +292,11 @@ h1 {
     display: inline-block;
 }
 
-.color-description i {
-    margin-right: 6px;
-}
+    .color-description i {
+        margin-right: 6px;
+    }
 
-/* Кнопки */
+/* ÐšÐ½Ð¾Ð¿ÐºÐ¸ */
 .links-section {
     display: flex;
     flex-direction: column;
@@ -305,7 +313,7 @@ h1 {
     border-radius: 50px;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: all 0.2s ease;
     border: 1px solid transparent;
 }
@@ -316,10 +324,10 @@ h1 {
     box-shadow: 0 8px 16px -6px #354A11;
 }
 
-.btn-primary:hover {
-    background-color: #1F2E0A;
-    transform: scale(1.02);
-}
+    .btn-primary:hover {
+        background-color: #1F2E0A;
+        transform: scale(1.02);
+    }
 
 .btn-secondary {
     background-color: #F6CBD5;
@@ -327,11 +335,11 @@ h1 {
     border: 1px solid #DD9FAF;
 }
 
-.btn-secondary:hover {
-    background-color: #f5b8c7;
-    border-color: #604B30;
-    color: #1F2E0A;
-}
+    .btn-secondary:hover {
+        background-color: #f5b8c7;
+        border-color: #604B30;
+        color: #1F2E0A;
+    }
 
 .btn i {
     font-size: 1.2rem;
@@ -343,7 +351,7 @@ h1 {
     color: #E5CFB8;
 }
 
-/* Подсказки */
+/* ÐŸÐ¾Ð´ÑÐºÐ°Ð·ÐºÐ¸ */
 .hint-box {
     background: #f3ede7;
     border-radius: 30px;
@@ -360,23 +368,23 @@ h1 {
     margin: 20px 0;
 }
 
-.hint-item i {
-    color: #DD9FAF;
-    width: 20px;
-}
+    .hint-item i {
+        color: #DD9FAF;
+        width: 20px;
+    }
 
-.hint-item code {
-    background: #fff0e7;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-family: monospace;
-}
+    .hint-item code {
+        background: #fff0e7;
+        padding: 2px 6px;
+        border-radius: 12px;
+        font-family: monospace;
+    }
 
-/* Футер */
+/* Ð¤ÑƒÑ‚ÐµÑ€ */
 .footnote {
     text-align: center;
     margin-top: 35px;
-    font-size: 0.85rem;
+    font-size: 0.80rem;
     color: #6D7F4F;
     border-top: 1px dashed #DD9FAF;
     padding-top: 20px;
@@ -387,7 +395,7 @@ h1 {
     margin: 0 4px;
 }
 
-/* Адаптивность */
+/* ÐÐ´Ð°Ð¿Ñ‚Ð¸Ð²Ð½Ð¾ÑÑ‚ÑŒ */
 @media (max-width: 480px) {
     .card-content {
         padding: 30px 20px;
@@ -403,15 +411,20 @@ h1 {
 
     .parallax-container {
         height: 300px;
+        margin: 20px -18px 30px;
     }
 
-    .parallax-text .big-date {
-        font-size: 2.5rem;
+    .parallax-text {
+        padding: 170px 20px;
     }
+
+        .parallax-text .big-date {
+            font-size: 2.5rem;
+        }
 }
-/* ДОБАВЬТЕ ЭТИ СТИЛИ В КОНЕЦ ФАЙЛА style.css */
+/* Ð”ÐžÐ‘ÐÐ’Ð¬Ð¢Ð• Ð­Ð¢Ð˜ Ð¡Ð¢Ð˜Ð›Ð˜ Ð’ ÐšÐžÐÐ•Ð¦ Ð¤ÐÐ™Ð›Ð style.css */
 
-/* Блок с обратным отсчетом */
+/* Ð‘Ð»Ð¾Ðº Ñ Ð¾Ð±Ñ€Ð°Ñ‚Ð½Ñ‹Ð¼ Ð¾Ñ‚ÑÑ‡ÐµÑ‚Ð¾Ð¼ */
 .countdown-section {
     background: linear-gradient(135deg, #354A11 0%, #6D7F4F 100%);
     border-radius: 30px;
@@ -470,30 +483,139 @@ h1 {
     letter-spacing: 1px;
 }
 
-/* Адаптация для мобильных */
+/* ÐÐ´Ð°Ð¿Ñ‚Ð°Ñ†Ð¸Ñ Ð´Ð»Ñ Ð¼Ð¾Ð±Ð¸Ð»ÑŒÐ½Ñ‹Ñ… */
 @media (max-width: 480px) {
     .countdown-section {
         padding: 20px 15px;
     }
-    
+
     .countdown-title {
         font-size: 1.6rem;
     }
-    
+
     .countdown-timer {
         gap: 10px;
     }
-    
+
     .countdown-item {
         min-width: 55px;
     }
-    
+
     .countdown-value {
-        font-size: 2rem;
+        font-size: 1.6rem;
         padding: 8px 10px;
     }
-    
+
     .countdown-label {
+        font-size: 0.7rem;
+    }
+}
+
+/* ÐšÐ°Ð»ÐµÐ½Ð´Ð°Ñ€ÑŒ Ð½Ð° Ð¿ÐµÑ€Ð²Ð¾Ð¼ Ñ„Ð¾Ñ‚Ð¾ */
+.calendar-overlay {
+    position: absolute;
+    bottom: 300px;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    transform: translateY(0);
+    transition: transform 0.2s ease-out;
+}
+
+.calendar-week {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(1px);
+    border-radius: 24px;
+    padding: 2px 25px;
+    box-shadow: 0 10px 30px rgba(53, 74, 17, 0.4);
+    border: 2px solid #F6CBD5;
+    max-width: 350px;
+    width: 90%;
+}
+
+.calendar-header {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #354A11;
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 2px dashed #DD9FAF;
+    padding-bottom: 5px;
+}
+
+.week-days, .week-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.week-day {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #604B30;
+    padding: 5px 0;
+}
+
+.date-cell {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #354A11;
+    padding: 8px 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.wedding-date {
+    background-color: #DD9FAF;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 4px 8px rgba(221, 159, 175, 0.5);
+    border: 2px solid white;
+}
+
+.calendar-footer {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #6D7F4F;
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 2px dashed #E5CFB8;
+}
+
+/* ÐšÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° Ð´Ð»Ñ Ð¼Ð¾Ð±Ð¸Ð»ÑŒÐ½Ñ‹Ñ… */
+@media (max-width: 480px) {
+    .calendar-overlay {
+        bottom: 130px;
+    }
+
+    .calendar-week {
+        padding: 1px 20px;
+        max-width: 250px
+    }
+
+    .calendar-header {
+        font-size: 1.5rem;
+    }
+
+    .date-cell {
+        font-size: 1.1rem;
+        width: 32px;
+        height: 32px;
+    }
+
+    .week-day {
         font-size: 0.7rem;
     }
 }
