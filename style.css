@@ -76,18 +76,18 @@ h1 {
     word-spacing: 4px;
 }
 
-    .inviters i {
-        color: #DD9FAF;
-        margin: 0 6px;
-        font-size: 1rem;
-    }
+.inviters i {
+    color: #DD9FAF;
+    margin: 0 6px;
+    font-size: 1rem;
+}
 
 .couple-names {
     font-weight: 600;
     font-size: 1.3rem;
 }
 
-/* ÐŸÐ°Ñ€Ð°Ð»Ð»Ð°ÐºÑ ÐºÐ¾Ð½Ñ‚ÐµÐ¹Ð½ÐµÑ€ */
+/* Main photo */
 .parallax-container {
     position: relative;
     width: 111%;
@@ -96,12 +96,12 @@ h1 {
     overflow: hidden;
     box-shadow: 0 12px 24px -10px rgba(53, 74, 17, 0.3);
     border: 2px solid #F6CBD5;
-    height: 500px;
+    height: 600px;
 }
 
 .parallax-image {
     position: absolute;
-    top: -30px;
+    top: -80px;
     left: 0;
     width: 100%;
     height: 130%;
@@ -137,38 +137,38 @@ h1 {
     transition: transform 0.2s ease-out;
 }
 
-    .parallax-text .big-date {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 3.2rem;
-        font-weight: 700;
-        line-height: 1;
-        margin-bottom: 5px;
-        color: #F6CBD5;
-        text-shadow: 2px 2px 0 #354A11;
-    }
+.parallax-text .big-date {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 5px;
+    color: #F6CBD5;
+    text-shadow: 2px 2px 0 #354A11;
+ }
 
-    .parallax-text .venue {
-        font-size: 1.2rem;
-        font-weight: 500;
-        letter-spacing: 1px;
-    }
+.parallax-text .venue {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
 
-        .parallax-text .venue i {
-            margin-right: 6px;
-            color: #E5CFB8;
-        }
+.parallax-text .venue i {
+     margin-right: 6px;
+     color: #E5CFB8;
+}
 
-    .parallax-text .time-info {
-        font-size: 1.2rem;
-        margin-top: 6px;
-    }
+.parallax-text .time-info {
+    font-size: 1.2rem;
+    margin-top: 6px;
+}
 
-        .parallax-text .time-info i {
-            margin-right: 4px;
-            color: #E5CFB8;
-        }
+.parallax-text .time-info i {
+    margin-right: 4px;
+    color: #E5CFB8;
+}
 
-/* Ð”ÐµÑ‚Ð°Ð»Ð¸ ÑÐ¾Ð±Ñ‹Ñ‚Ð¸Ñ */
+/* Main info */
 .detail-block {
     margin: 35px 0 20px;
     padding: 10px 0;
@@ -226,7 +226,7 @@ h1 {
     font-style: italic;
 }
 
-/* Ð¦Ð²ÐµÑ‚Ð¾Ð²Ð°Ñ Ð¿Ð°Ð»Ð¸Ñ‚Ñ€Ð° */
+/* Colors info */
 .colors-section {
     background-color: #FAF6F2;
     border-radius: 40px 40px 20px 20px;
@@ -296,7 +296,7 @@ h1 {
         margin-right: 6px;
     }
 
-/* ÐšÐ½Ð¾Ð¿ÐºÐ¸ */
+/* Links button */
 .links-section {
     display: flex;
     flex-direction: column;
@@ -351,7 +351,7 @@ h1 {
     color: #E5CFB8;
 }
 
-/* ÐŸÐ¾Ð´ÑÐºÐ°Ð·ÐºÐ¸ */
+/* Options info */
 .hint-box {
     background: #f3ede7;
     border-radius: 30px;
@@ -380,7 +380,7 @@ h1 {
         font-family: monospace;
     }
 
-/* Ð¤ÑƒÑ‚ÐµÑ€ */
+/* End text */
 .footnote {
     text-align: center;
     margin-top: 35px;
@@ -395,7 +395,7 @@ h1 {
     margin: 0 4px;
 }
 
-/* ÐÐ´Ð°Ð¿Ñ‚Ð¸Ð²Ð½Ð¾ÑÑ‚ÑŒ */
+/* Phone fix */
 @media (max-width: 480px) {
     .card-content {
         padding: 30px 20px;
@@ -406,11 +406,11 @@ h1 {
     }
 
     .inviters {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .parallax-container {
-        height: 300px;
+        height: 350px;
         margin: 20px -18px 30px;
     }
 
@@ -422,9 +422,8 @@ h1 {
             font-size: 2.5rem;
         }
 }
-/* Ð”ÐžÐ‘ÐÐ’Ð¬Ð¢Ð• Ð­Ð¢Ð˜ Ð¡Ð¢Ð˜Ð›Ð˜ Ð’ ÐšÐžÐÐ•Ð¦ Ð¤ÐÐ™Ð›Ð style.css */
 
-/* Ð‘Ð»Ð¾Ðº Ñ Ð¾Ð±Ñ€Ð°Ñ‚Ð½Ñ‹Ð¼ Ð¾Ñ‚ÑÑ‡ÐµÑ‚Ð¾Ð¼ */
+/* Time info */
 .countdown-section {
     background: linear-gradient(135deg, #354A11 0%, #6D7F4F 100%);
     border-radius: 30px;
@@ -483,7 +482,7 @@ h1 {
     letter-spacing: 1px;
 }
 
-/* ÐÐ´Ð°Ð¿Ñ‚Ð°Ñ†Ð¸Ñ Ð´Ð»Ñ Ð¼Ð¾Ð±Ð¸Ð»ÑŒÐ½Ñ‹Ñ… */
+/* Phone fix */
 @media (max-width: 480px) {
     .countdown-section {
         padding: 20px 15px;
@@ -511,10 +510,10 @@ h1 {
     }
 }
 
-/* ÐšÐ°Ð»ÐµÐ½Ð´Ð°Ñ€ÑŒ Ð½Ð° Ð¿ÐµÑ€Ð²Ð¾Ð¼ Ñ„Ð¾Ñ‚Ð¾ */
+/* Calendar on photo */
 .calendar-overlay {
     position: absolute;
-    bottom: 300px;
+    bottom: 380px;
     left: 0;
     width: 100%;
     z-index: 5;
@@ -527,7 +526,7 @@ h1 {
 
 .calendar-week {
     background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(0.5px);
     border-radius: 24px;
     padding: 2px 25px;
     box-shadow: 0 10px 30px rgba(53, 74, 17, 0.4);
@@ -542,9 +541,7 @@ h1 {
     font-weight: 700;
     color: #354A11;
     text-align: center;
-    margin-bottom: 10px;
     border-bottom: 2px dashed #DD9FAF;
-    padding-bottom: 5px;
 }
 
 .week-days, .week-dates {
@@ -559,7 +556,7 @@ h1 {
     font-weight: 600;
     font-size: 0.9rem;
     color: #604B30;
-    padding: 5px 0;
+    padding: 1px 0;
 }
 
 .date-cell {
@@ -568,8 +565,8 @@ h1 {
     color: #354A11;
     padding: 8px 0;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -594,10 +591,10 @@ h1 {
     border-top: 2px dashed #E5CFB8;
 }
 
-/* ÐšÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° Ð´Ð»Ñ Ð¼Ð¾Ð±Ð¸Ð»ÑŒÐ½Ñ‹Ñ… */
+/* Phone fix */
 @media (max-width: 480px) {
     .calendar-overlay {
-        bottom: 130px;
+        bottom: 210px;
     }
 
     .calendar-week {
@@ -610,9 +607,9 @@ h1 {
     }
 
     .date-cell {
-        font-size: 1.1rem;
-        width: 32px;
-        height: 32px;
+        font-size: 0.85rem;
+        width: 25px;
+        height: 25px;
     }
 
     .week-day {
