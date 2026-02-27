@@ -565,8 +565,8 @@ h1 {
     color: #354A11;
     padding: 8px 0;
     border-radius: 50%;
-    width: 38px;
-    height: 38px;
+    width: 30px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -574,12 +574,36 @@ h1 {
 }
 
 .wedding-date {
-    background-color: #DD9FAF;
-    color: white;
+    background-color: transparent;
+    color: #DD9FAF;
     font-weight: 700;
-    box-shadow: 0 4px 8px rgba(221, 159, 175, 0.5);
-    border: 2px solid white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+    .wedding-date::after {
+        content: "♥";
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 4.5rem;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #DD9FAF;
+        -webkit-text-stroke: 1px white;         
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
+        z-index: 1;
+    }
+
+    .wedding-date span {
+        position: relative;
+        z-index: 2;
+        color: white;
+        font-weight: 700;
+        text-shadow: 0 2px 4px rgba(53, 74, 17, 0.5);
+    }
 
 .calendar-footer {
     text-align: center;
@@ -608,11 +632,15 @@ h1 {
 
     .date-cell {
         font-size: 0.85rem;
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 35px;
     }
 
     .week-day {
         font-size: 0.7rem;
+    }
+    
+    .wedding-date::after {
+        font-size: 3.5rem;
     }
 }
