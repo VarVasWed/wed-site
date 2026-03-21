@@ -27,7 +27,7 @@
             <!-- КОНТЕЙНЕР С ПАРАЛЛАКСОМ -->
             <div class="parallax-container" id="parallaxContainer">
                 <!-- Фото с эффектом параллакса -->
-                <div class="parallax-image" id="parallaxImage" style="background-image: url('https://drive.google.com/thumbnail?id=11qQuandvVMiFsBFi2IHdQdu0sSpbnibW&sz=w1000');"></div>
+                <div class="parallax-image" id="parallaxImage" style="background-image: url('https://drive.google.com/file/d/1cJSedTSweVPZwOZuJWzuImc7yNecNfE5/view?usp=drive_link');"></div>
                 <!-- Затемнение -->
                 <div class="parallax-overlay"></div>
                 <!-- Календарь на фото -->
@@ -172,7 +172,30 @@
             </div>
         </div>
     </div>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бесконечная карусель | Плавное непрерывное движение</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="infinite-carousel-container">
+    <div class="infinite-carousel">
+        <div class="infinite-track" id="infiniteTrack">
+            <!-- Слайды будут добавлены через JavaScript -->
+        </div>
+        <div class="controls">
+            <button class="control-btn" id="pauseInfiniteBtn">⏸</button>
+        </div>
+        <div class="speed-control">
+            <span>🐌</span>
+            <input type="range" id="speedSlider" min="5" max="30" value="20" step="1">
+            <span>🐇</span>
+        </div>
+    </div>
+</div>
 
+    <script src="script.js"></script>
+</body>
     <!-- Подключение внешнего JavaScript файла -->
     <script src="script.js"></script>
 </body>
