@@ -254,3 +254,4 @@ speedSlider.addEventListener('input', changeSpeed);
 document.ad
     setInterval(updateCountdown, 1000);
 })();
+dEventListener('DOMContentLoaded', initInfiniteCarousel);
