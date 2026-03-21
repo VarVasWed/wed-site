@@ -111,5 +111,146 @@
     
     // Запускаем таймер и обновляем каждую секунду
     updateCountdown();
+
+    // Данные для слайдов (можно легко заменить на свои)
+const slides = [
+    {
+        image: 'https://picsum.photos/id/1015/1200/500',
+        caption: '🏔️ Горный пейзаж - величие природы'
+    },
+    {
+        image: 'https://picsum.photos/id/104/1200/500',
+        caption: '💦 Живописный водопад'
+    },
+    {
+        image: 'https://picsum.photos/id/106/1200/500',
+        caption: '🌸 Цветущая сакура'
+    },
+    {
+        image: 'https://picsum.photos/id/15/1200/500',
+        caption: '🌲 Загадочный лес'
+    },
+    {
+        image: 'https://picsum.photos/id/20/1200/500',
+        caption: '🌊 Тихий океан'
+    }
+];
+
+// Состояние карусели
+let isPlaying = true;
+let currentSpeed = 20; // секунд на полный цикл
+let animationElement = null;
+
+// Получаем элементы DOM
+const track = document.getElementById('infiniteTrack');
+const pauseBtn = document.getElementById('pauseInfiniteBtn');
+const speedSlider = document.getElementById('speedSlider');
+
+/**
+ * Создает слайды и дублирует их для бесконечного эффекта
+ */
+function createInfiniteSlides() {
+    // Создаем оригинальные слайды
+    slides.forEach((slide, index) => {
+        const slideDiv = document.createElement('div');
+        slideDiv.className = 'infinite-slide';
+        slideDiv.innerHTML = `
+            <img src="${slide.image}" alt="Slide ${index + 1}">
+            <div class="slide-caption">${slide.caption}</div>
+        `;
+        track.appendChild(slideDiv);
+    });
+    
+    // Дублируем слайды для бесконечного эффекта
+    // Это создает эффект бесконечной ленты без видимых разрывов
+    slides.forEach((slide, index) => {
+        const slideDiv = document.createElement('div');
+        slideDiv.className = 'infinite-slide';
+        slideDiv.innerHTML = `
+            <img src="${slide.image}" alt="Slide ${index + 1} duplicate">
+            <div class="slide-caption">${slide.caption}</div>
+        `;
+        track.appendChild(slideDiv);
+    });
+}
+
+/**
+ * Обновляет скорость анимации карусели
+ */
+function updateAnimationSpeed() {
+    const duration = currentSpeed;
+    if (animationElement) {
+        // Устанавливаем новую длительность анимации
+        animationElement.style.animation = `scroll ${duration}s linear ${isPlaying ? 'infinite' : 'paused'}`;
+    }
+}
+
+/**
+ * Переключает состояние воспроизведения (пауза/продолжить)
+ */
+function toggleInfinitePlay() {
+    isPlaying = !isPlaying;
+    pauseBtn.textContent = isPlaying ? '⏸' : '▶';
+    
+    if (animationElement) {
+        if (isPlaying) {
+            animationElement.style.animationPlayState = 'running';
+        } else {
+            animationElement.style.animationPlayState = 'paused';
+        }
+    }
+}
+
+/**
+ * Изменяет скорость прокрутки на основе значения слайдера
+ */
+function changeSpeed() {
+    currentSpeed = speedSlider.value;
+    updateAnimationSpeed();
+}
+
+/**
+ * Инициализирует карусель
+ */
+function initInfiniteCarousel() {
+    createInfiniteSlides();
+    animationElement = track;
+    updateAnimationSpeed();
+    
+    // Добавляем обработчик для отслеживания завершения циклов анимации
+    track.addEventListener('animationiteration', () => {
+        // Этот обработчик срабатывает при каждом завершении цикла анимации
+        // Можно использовать для дополнительной логики, если необходимо
+        console.log('Цикл анимации завершен');
+    });
+}
+
+/**
+ * Обновляет данные слайдов (если нужно динамически менять содержимое)
+ * @param {Array} newSlides - новый массив слайдов
+ */
+function updateSlides(newSlides) {
+    // Очищаем трек
+    while (track.firstChild) {
+        track.removeChild(track.firstChild);
+    }
+    
+    // Обновляем глобальный массив слайдов
+    slides.length = 0;
+    slides.push(...newSlides);
+    
+    // Пересоздаем слайды
+    createInfiniteSlides();
+    
+    // Перезапускаем анимацию
+    updateAnimationSpeed();
+}
+
+// Регистрируем обработчики событий
+pauseBtn.addEventListener('click', toggleInfinitePlay);
+speedSlider.addEventListener('input', changeSpeed);
+
+// Запускаем карусель после загрузки страницы
+document.ad
     setInterval(updateCountdown, 1000);
 })();
