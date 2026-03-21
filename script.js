@@ -115,23 +115,23 @@
     // Данные для слайдов (можно легко заменить на свои)
 const slides = [
     {
-        image: 'https://picsum.photos/id/1015/1200/500',
+        image: 'https://drive.google.com/thumbnail?id=11qQuandvVMiFsBFi2IHdQdu0sSpbnibW=w1000',
         caption: '🏔️ Горный пейзаж - величие природы'
     },
     {
-        image: 'https://picsum.photos/id/104/1200/500',
+        image: 'https://drive.google.com/thumbnail?id=1NBsFKktjC1UNA6SK5BVRzPCr8WTdwKPs=w1000',
         caption: '💦 Живописный водопад'
     },
     {
-        image: 'https://picsum.photos/id/106/1200/500',
+        image: 'https://drive.google.com/thumbnail?id=1bJ7wWIVWhwiSgvWyuPqu1tGqYUKNo5KB=w1000',
         caption: '🌸 Цветущая сакура'
     },
     {
-        image: 'https://picsum.photos/id/15/1200/500',
+        image: 'https://drive.google.com/thumbnail?id=11qQuandvVMiFsBFi2IHdQdu0sSpbnibW=w1000',
         caption: '🌲 Загадочный лес'
     },
     {
-        image: 'https://picsum.photos/id/20/1200/500',
+        image: 'https://drive.google.com/thumbnail?id=1NBsFKktjC1UNA6SK5BVRzPCr8WTdwKPs=w1000',
         caption: '🌊 Тихий океан'
     }
 ];
