@@ -251,7 +251,7 @@ pauseBtn.addEventListener('click', toggleInfinitePlay);
 speedSlider.addEventListener('input', changeSpeed);
 
 // Запускаем карусель после загрузки страницы
-document.ad
+document.addEventListener('DOMContentLoaded', initInfiniteCarousel);
     setInterval(updateCountdown, 1000);
 })();
-dEventListener('DOMContentLoaded', initInfiniteCarousel);
+
