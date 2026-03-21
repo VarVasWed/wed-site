@@ -111,6 +111,8 @@
     
     // Запускаем таймер и обновляем каждую секунду
     updateCountdown();
+    setInterval(updateCountdown, 1000);
+})();
 
     // Данные для слайдов (можно легко заменить на свои)
 const slides = [
@@ -252,6 +254,3 @@ speedSlider.addEventListener('input', changeSpeed);
 
 // Запускаем карусель после загрузки страницы
 document.addEventListener('DOMContentLoaded', initInfiniteCarousel);
-    setInterval(updateCountdown, 1000);
-})();
-
