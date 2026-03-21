@@ -95,7 +95,7 @@ h1 {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 12px 24px -10px rgba(53, 74, 17, 0.3);
-    border: 2px solid #F6CBD5;
+    border: px solid #F6CBD5;
     height: 600px;
 }
 
@@ -410,7 +410,7 @@ h1 {
     }
 
     .parallax-container {
-        height: 350px;
+        height: 400px;
         margin: 20px -18px 30px;
     }
 
@@ -513,9 +513,9 @@ h1 {
 /* Calendar on photo */
 .calendar-overlay {
     position: absolute;
-    bottom: 380px;
-    left: 0;
-    width: 100%;
+    bottom: 480px;
+    left: 30px;
+    width: 90%;
     z-index: 5;
     display: flex;
     justify-content: center;
@@ -526,12 +526,12 @@ h1 {
 
 .calendar-week {
     background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(0.5px);
-    border-radius: 24px;
+    backdrop-filter: blur(6.5px);
+    border-radius: 10px;
     padding: 2px 25px;
     box-shadow: 0 10px 30px rgba(53, 74, 17, 0.4);
     border: 2px solid #F6CBD5;
-    max-width: 350px;
+    max-width: 700px;
     width: 90%;
 }
 
@@ -565,8 +565,8 @@ h1 {
     color: #354A11;
     padding: 8px 0;
     border-radius: 50%;
-    width: 30px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -574,36 +574,12 @@ h1 {
 }
 
 .wedding-date {
-    background-color: transparent;
-    color: #DD9FAF;
+    background-color: #DD9FAF;
+    color: white;
     font-weight: 700;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    box-shadow: 0 4px 8px rgba(221, 159, 175, 0.5);
+    border: 2px solid white;
 }
-
-    .wedding-date::after {
-        content: "♥";
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 4.5rem;
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #DD9FAF;
-        -webkit-text-stroke: 1px white;         
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
-        z-index: 1;
-    }
-
-    .wedding-date span {
-        position: relative;
-        z-index: 2;
-        color: white;
-        font-weight: 700;
-        text-shadow: 0 2px 4px rgba(53, 74, 17, 0.5);
-    }
 
 .calendar-footer {
     text-align: center;
@@ -613,46 +589,6 @@ h1 {
     margin-top: 10px;
     padding-top: 8px;
     border-top: 2px dashed #E5CFB8;
-}
-
-/* Phone fix */
-@media (max-width: 480px) {
-    .calendar-overlay {
-        bottom: 210px;
-    }
-
-    .calendar-week {
-        padding: 1px 20px;
-        max-width: 250px
-    }
-
-    .calendar-header {
-        font-size: 1.5rem;
-    }
-
-    .date-cell {
-        font-size: 0.85rem;
-        width: 20px;
-        height: 35px;
-    }
-
-    .week-day {
-        font-size: 0.7rem;
-    }
-    
-    .wedding-date::after {
-        font-size: 3.5rem;
-    }
-}
-
-.infinite-carousel-container {
-    max-width: 1200px;
-    width: 100%;
-    position: relative;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    padding: 20px;
-    backdrop-filter: blur(10px);
 }
 
 .infinite-carousel {
@@ -665,40 +601,31 @@ h1 {
 
 .infinite-track {
     display: flex;
-    animation: scroll 20s linear infinite;
+    flex-direction: column;
+    gap: 20 px;
+    animation: scrollVertical 40s linear infinite;
 }
 
 .infinite-slide {
     flex: 0 0 100%;
     position: relative;
+    left: 60px
 }
 
 .infinite-slide img {
-    width: 100%;
+    width: 80%;
     height: 500px;
     object-fit: cover;
     display: block;
 }
 
-.slide-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-    color: white;
-    padding: 40px 30px 20px;
-    font-size: 1.2rem;
-    text-align: center;
-    animation: fadeIn 0.5s ease;
-}
 
-@keyframes scroll {
+@keyframes scrollVertical {
     0% {
-        transform: translateX(0);
+        transform: translateY(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateY(-50%);
     }
 }
 
@@ -713,97 +640,53 @@ h1 {
     }
 }
 
-.controls {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    display: flex;
-    gap: 10px;
-    z-index: 10;
-}
+/* Phone fix */
+@media (max-width: 480px) {
+    .calendar-overlay {
+        bottom: 304px;
+        left: 5px;
+        width: 100%;
+    }
 
-.control-btn {
-    background: rgba(255, 255, 255, 0.9);
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
+    .calendar-week {
+        padding: 1px 20px;
+        max-width: 320px;
+    }
 
-.control-btn:hover {
-    background: white;
-    transform: scale(1.1);
-}
+    .calendar-header {
+        font-size: 1.5rem;
+    }
 
-.speed-control {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    z-index: 10;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
+    .date-cell {
+        font-size: 0.85rem;
+        width: 25px;
+        height: 25px;
+    }
 
-.speed-control input {
-    width: 100px;
-    cursor: pointer;
-}
+    .week-day {
+        font-size: 0.7rem;
+    }
+    
+    .wedding-date::after {
+        font-size: 3.5rem;
+    }
 
-/* Адаптивность для мобильных устройств */
-max-width: 768px {
+    .infinite-slide {
+        flex: 0 0 100%;
+        left: 43px
+    }
+    
     .infinite-slide img {
+        width: 80%;
         height: 300px;
     }
-    
-    .slide-caption {
-        font-size: 0.9rem;
-        padding: 20px 15px 10px;
-    }
 
-    .controls {
-        bottom: 20px;
-        right: 20px;
-    }
-
-    .control-btn {
-        width: 35px;
-        height: 35px;
-        font-size: 14px;
-    }
-
-    .speed-control {
-        bottom: 20px;
-        left: 20px;
-        font-size: 12px;
-        padding: 6px 12px;
-    }
-
-    .speed-control input {
-        width: 80px;
-    }
-}
-
-/* Адаптивность для очень маленьких экранов */
-max-width: 480px {
-    .infinite-carousel-container {
-        padding: 10px;
-    }
-    
-    .infinite-slide img {
-        height: 250px;
-    }
-    
-    .slide-caption {
-        font-size: 0.8rem;
-        padding: 15px 10px 8px;
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-800%);
+        }
     }
 }

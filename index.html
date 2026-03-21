@@ -26,10 +26,15 @@
 
             <!-- КОНТЕЙНЕР С ПАРАЛЛАКСОМ -->
             <div class="parallax-container" id="parallaxContainer">
-                <!-- Фото с эффектом параллакса -->
-                <div class="parallax-image" id="parallaxImage" style="background-image: url('https://drive.google.com/thumbnail?id=1cJSedTSweVPZwOZuJWzuImc7yNecNfE5&sz=w1000');"></div>
-                <!-- Затемнение -->
-                <div class="parallax-overlay"></div>
+                
+                    <div class="infinite-carousel">
+                        <div class="infinite-track" id="infiniteTrack">
+                            <!-- Слайды будут добавлены через JavaScript -->
+                        </div>
+                        
+                    </div>
+                
+
                 <!-- Календарь на фото -->
                 <div class="calendar-overlay" id="calendarOverlay">
                     <div class="calendar-week">
@@ -166,22 +171,7 @@
                     </div>
                 </div>
             </div>
-
-            <div class="infinite-carousel-container">
-                <div class="infinite-carousel">
-                    <div class="infinite-track" id="infiniteTrack">
-                        <!-- Слайды будут добавлены через JavaScript -->
-                    </div>
-                    <div class="controls">
-                        <button class="control-btn" id="pauseInfiniteBtn">⏸</button>
-                    </div>
-                    <div class="speed-control">
-                        <span>🐌</span>
-                        <input type="range" id="speedSlider" min="5" max="30" value="20" step="1">
-                        <span>🐇</span>
-                    </div>
-                </div>
-            </div>
+            
             
             <div class="footnote">
                 <i class="fas fa-heart heart"></i> Ждём вас, чтобы разделить этот день <i class="fas fa-heart heart"></i>

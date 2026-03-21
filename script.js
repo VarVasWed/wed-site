@@ -117,31 +117,41 @@
     // Данные для слайдов (можно легко заменить на свои)
 const slides = [
     {
-        image: 'https://drive.google.com/thumbnail?id=11qQuandvVMiFsBFi2IHdQdu0sSpbnibW&sz=w1000',
-        caption: '🏔️ Горный пейзаж - величие природы'
+        image: 'https://drive.google.com/thumbnail?id=1vSzat6yauTRbL4WtuKGisAlif4luOD_I&sz=w1000',
+        caption: 'Динозавр'
     },
     {
-        image: 'https://drive.google.com/thumbnail?id=1NBsFKktjC1UNA6SK5BVRzPCr8WTdwKPs&sz=w1000',
-        caption: '💦 Живописный водопад'
+        image: 'https://drive.google.com/thumbnail?id=152-noc-nOB7jXhbc3E0TYx6DB1huj_ov&sz=w1000',
+        caption: 'Риба'
     },
     {
-        image: 'https://drive.google.com/thumbnail?id=1bJ7wWIVWhwiSgvWyuPqu1tGqYUKNo5KB&sz=w1000',
-        caption: '🌸 Цветущая сакура'
+        image: 'https://drive.google.com/thumbnail?id=1wwxOGwDwBR3cXvzXQsanpHh-sAHHiOt3&sz=w1000',
+        caption: 'поле'
     },
     {
-        image: 'https://drive.google.com/thumbnail?id=11qQuandvVMiFsBFi2IHdQdu0sSpbnibW&sz=w1000',
-        caption: '🌲 Загадочный лес'
+        image: 'https://drive.google.com/thumbnail?id=1zow_gD7j7sijI_-mb8Du7znpYiVuwH4V&sz=w1000',
+        caption: 'театр'
+    },
+     {
+        image: 'https://drive.google.com/thumbnail?id=1I5VC6fnJUe9mc4W22X1mgh7hWDWzmAw3&sz=w1000',
+        caption: 'парк'
     },
     {
-        image: 'https://drive.google.com/thumbnail?id=1NBsFKktjC1UNA6SK5BVRzPCr8WTdwKPs&sz=w1000',
-        caption: '🌊 Тихий океан'
-    }
+        image: 'https://drive.google.com/thumbnail?id=1M3yLAKyzB0A08Cti-vUJCq5eWBLtGMvt&sz=w1000',
+        caption: 'диплом'
+    },       
+    {
+        image: 'https://drive.google.com/thumbnail?id=1kSQQi5Nue_tHtDETE01DPW0eylCeCj6c&sz=w1000',
+        caption: 'снежок'
+    },
+    {
+        image: 'https://drive.google.com/thumbnail?id=1HoQhpSgspGvQ806dNMVFzf1Niit2Yje8&sz=w1000',
+        caption: 'зеркало'
+    },
 ];
 
 // Состояние карусели
-let isPlaying = true;
 let currentSpeed = 20; // секунд на полный цикл
-let animationElement = null;
 
 // Получаем элементы DOM
 const track = document.getElementById('infiniteTrack');
@@ -157,9 +167,8 @@ function createInfiniteSlides() {
         const slideDiv = document.createElement('div');
         slideDiv.className = 'infinite-slide';
         slideDiv.innerHTML = `
-            <img src="${slide.image}" alt="Slide ${index + 1}">
-            <div class="slide-caption">${slide.caption}</div>
-        `;
+            <img src="${slide.image}" alt="Slide ${index + 1}"></div>
+            `;
         track.appendChild(slideDiv);
     });
     
@@ -169,55 +178,18 @@ function createInfiniteSlides() {
         const slideDiv = document.createElement('div');
         slideDiv.className = 'infinite-slide';
         slideDiv.innerHTML = `
-            <img src="${slide.image}" alt="Slide ${index + 1} duplicate">
-            <div class="slide-caption">${slide.caption}</div>
+            <img src="${slide.image}" alt="Slide ${index + 1} duplicate"></div>
         `;
         track.appendChild(slideDiv);
     });
 }
 
-/**
- * Обновляет скорость анимации карусели
- */
-function updateAnimationSpeed() {
-    const duration = currentSpeed;
-    if (animationElement) {
-        // Устанавливаем новую длительность анимации
-        animationElement.style.animation = `scroll ${duration}s linear ${isPlaying ? 'infinite' : 'paused'}`;
-    }
-}
-
-/**
- * Переключает состояние воспроизведения (пауза/продолжить)
- */
-function toggleInfinitePlay() {
-    isPlaying = !isPlaying;
-    pauseBtn.textContent = isPlaying ? '⏸' : '▶';
-    
-    if (animationElement) {
-        if (isPlaying) {
-            animationElement.style.animationPlayState = 'running';
-        } else {
-            animationElement.style.animationPlayState = 'paused';
-        }
-    }
-}
-
-/**
- * Изменяет скорость прокрутки на основе значения слайдера
- */
-function changeSpeed() {
-    currentSpeed = speedSlider.value;
-    updateAnimationSpeed();
-}
 
 /**
  * Инициализирует карусель
  */
 function initInfiniteCarousel() {
     createInfiniteSlides();
-    animationElement = track;
-    updateAnimationSpeed();
     
     // Добавляем обработчик для отслеживания завершения циклов анимации
     track.addEventListener('animationiteration', () => {
@@ -226,31 +198,6 @@ function initInfiniteCarousel() {
         console.log('Цикл анимации завершен');
     });
 }
-
-/**
- * Обновляет данные слайдов (если нужно динамически менять содержимое)
- * @param {Array} newSlides - новый массив слайдов
- */
-function updateSlides(newSlides) {
-    // Очищаем трек
-    while (track.firstChild) {
-        track.removeChild(track.firstChild);
-    }
-    
-    // Обновляем глобальный массив слайдов
-    slides.length = 0;
-    slides.push(...newSlides);
-    
-    // Пересоздаем слайды
-    createInfiniteSlides();
-    
-    // Перезапускаем анимацию
-    updateAnimationSpeed();
-}
-
-// Регистрируем обработчики событий
-pauseBtn.addEventListener('click', toggleInfinitePlay);
-speedSlider.addEventListener('input', changeSpeed);
 
 // Запускаем карусель после загрузки страницы
 document.addEventListener('DOMContentLoaded', initInfiniteCarousel);
