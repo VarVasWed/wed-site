@@ -644,7 +644,7 @@ h1 {
 @media (max-width: 480px) {
     .calendar-overlay {
         bottom: 304px;
-        left: 5px;
+        left: 1px;
         width: 100%;
     }
 
@@ -673,7 +673,7 @@ h1 {
 
     .infinite-slide {
         flex: 0 0 100%;
-        left: 43px
+        left: 36px
     }
     
     .infinite-slide img {
