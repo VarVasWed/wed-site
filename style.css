@@ -68,7 +68,7 @@ h1 {
     font-weight: 400;
     font-size: 1.1rem;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: #6D7F4F;
     margin-bottom: 30px;
     border-bottom: 1px dashed #E5CFB8;
@@ -313,7 +313,7 @@ h1 {
     border-radius: 50px;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.3rem;
     transition: all 0.2s ease;
     border: 1px solid transparent;
 }
@@ -384,7 +384,7 @@ h1 {
 .footnote {
     text-align: center;
     margin-top: 35px;
-    font-size: 0.80rem;
+    font-size: 0.7rem;
     color: #6D7F4F;
     border-top: 1px dashed #DD9FAF;
     padding-top: 20px;
@@ -406,7 +406,15 @@ h1 {
     }
 
     .inviters {
+        font-size: 0.7rem;
+    }
+
+    .btn {
         font-size: 0.8rem;
+    }
+    
+    .couple-names {
+        font-size: 1.2rem;
     }
 
     .parallax-container {
@@ -489,11 +497,11 @@ h1 {
     }
 
     .countdown-title {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .countdown-timer {
-        gap: 10px;
+        gap: 5px;
     }
 
     .countdown-item {
@@ -514,7 +522,7 @@ h1 {
 .calendar-overlay {
     position: absolute;
     bottom: 480px;
-    left: 30px;
+    left: 5%;
     width: 90%;
     z-index: 5;
     display: flex;
@@ -609,12 +617,12 @@ h1 {
 .infinite-slide {
     flex: 0 0 100%;
     position: relative;
-    left: 60px
+    left: 10%
 }
 
 .infinite-slide img {
     width: 80%;
-    height: 500px;
+    height: 80%
     object-fit: cover;
     display: block;
 }
@@ -644,8 +652,8 @@ h1 {
 @media (max-width: 480px) {
     .calendar-overlay {
         bottom: 304px;
-        left: 1px;
         width: 100%;
+        left: 0%;
     }
 
     .calendar-week {
@@ -673,12 +681,11 @@ h1 {
 
     .infinite-slide {
         flex: 0 0 100%;
-        left: 36px
     }
     
     .infinite-slide img {
         width: 80%;
-        height: 300px;
+        height: 80%;
     }
 
     @keyframes scroll {
