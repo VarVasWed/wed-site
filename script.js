@@ -117,35 +117,35 @@
     // Данные для слайдов (можно легко заменить на свои)
 const slides = [
     {
-        image: 'https://drive.google.com/thumbnail?id=1vSzat6yauTRbL4WtuKGisAlif4luOD_I&sz=w1000',
+        image: './images/Rectangle 4 (2).png',
         caption: 'Динозавр'
     },
     {
-        image: 'https://drive.google.com/thumbnail?id=152-noc-nOB7jXhbc3E0TYx6DB1huj_ov&sz=w1000',
+        image: './images/Rectangle 4 (3).png',
         caption: 'Риба'
     },
     {
-        image: 'https://drive.google.com/thumbnail?id=1wwxOGwDwBR3cXvzXQsanpHh-sAHHiOt3&sz=w1000',
+        image: './images/Rectangle 4 (4).png',
         caption: 'поле'
     },
     {
-        image: 'https://drive.google.com/thumbnail?id=1zow_gD7j7sijI_-mb8Du7znpYiVuwH4V&sz=w1000',
+        image: './images/Rectangle 4 (5).png',
         caption: 'театр'
     },
      {
-        image: 'https://drive.google.com/thumbnail?id=1I5VC6fnJUe9mc4W22X1mgh7hWDWzmAw3&sz=w1000',
+        image: './images/Rectangle 6 (2).png',
         caption: 'парк'
     },
     {
-        image: 'https://drive.google.com/thumbnail?id=1M3yLAKyzB0A08Cti-vUJCq5eWBLtGMvt&sz=w1000',
+        image: './images/Rectangle 5 (2).png',
         caption: 'диплом'
     },       
     {
-        image: 'https://drive.google.com/thumbnail?id=1kSQQi5Nue_tHtDETE01DPW0eylCeCj6c&sz=w1000',
+        image: './images/Rectangle 6 (3).png',
         caption: 'снежок'
     },
     {
-        image: 'https://drive.google.com/thumbnail?id=1HoQhpSgspGvQ806dNMVFzf1Niit2Yje8&sz=w1000',
+        image: './images/Rectangle 4 (6).png',
         caption: 'зеркало'
     },
 ];
