@@ -132,8 +132,8 @@
         setTimeout(() => {
             showCountdownPopup();
             // Затем каждые 3 минуты
-            setInterval(showCountdownPopup, 180000);
-        }, 180000);
+            setInterval(showCountdownPopup, 30000);
+        }, 30000);
     }
 })();
 
