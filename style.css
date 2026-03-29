@@ -76,11 +76,11 @@ h1 {
     word-spacing: 4px;
 }
 
-.inviters i {
-    color: #DD9FAF;
-    margin: 0 6px;
-    font-size: 1rem;
-}
+    .inviters i {
+        color: #DD9FAF;
+        margin: 0 6px;
+        font-size: 1rem;
+    }
 
 .couple-names {
     font-weight: 600;
@@ -137,36 +137,36 @@ h1 {
     transition: transform 0.2s ease-out;
 }
 
-.parallax-text .big-date {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3.2rem;
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 5px;
-    color: #F6CBD5;
-    text-shadow: 2px 2px 0 #354A11;
- }
+    .parallax-text .big-date {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 5px;
+        color: #F6CBD5;
+        text-shadow: 2px 2px 0 #354A11;
+    }
 
-.parallax-text .venue {
-    font-size: 1.2rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-}
+    .parallax-text .venue {
+        font-size: 1.2rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
 
-.parallax-text .venue i {
-     margin-right: 6px;
-     color: #E5CFB8;
-}
+        .parallax-text .venue i {
+            margin-right: 6px;
+            color: #E5CFB8;
+        }
 
-.parallax-text .time-info {
-    font-size: 1.2rem;
-    margin-top: 6px;
-}
+    .parallax-text .time-info {
+        font-size: 1.2rem;
+        margin-top: 6px;
+    }
 
-.parallax-text .time-info i {
-    margin-right: 4px;
-    color: #E5CFB8;
-}
+        .parallax-text .time-info i {
+            margin-right: 4px;
+            color: #E5CFB8;
+        }
 
 /* Main info */
 .detail-block {
@@ -211,6 +211,21 @@ h1 {
         font-weight: 600;
         font-size: 1.25rem;
         color: #354A11;
+    }
+
+/* Ссылка на отель */
+.hotel-link {
+    color: #354A11;
+    text-decoration: none;
+    border-bottom: 2px dashed #DD9FAF;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+    .hotel-link:hover {
+        color: #6D7F4F;
+        border-bottom-color: #354A11;
     }
 
 .value small {
@@ -412,7 +427,7 @@ h1 {
     .btn {
         font-size: 0.8rem;
     }
-    
+
     .couple-names {
         font-size: 1.2rem;
     }
@@ -431,8 +446,9 @@ h1 {
         }
 }
 
-/* Time info */
+/* Time info - Блок с обратным отсчетом */
 .countdown-section {
+    position: relative;
     background: linear-gradient(135deg, #354A11 0%, #6D7F4F 100%);
     border-radius: 30px;
     padding: 30px 20px;
@@ -440,6 +456,49 @@ h1 {
     text-align: center;
     box-shadow: 0 15px 30px -8px rgba(53, 74, 17, 0.5);
     border: 2px solid #F6CBD5;
+    overflow: hidden;
+}
+
+/* Всплывающий фон внутри блока countdown */
+.countdown-popup-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+    .countdown-popup-bg.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .countdown-popup-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Затемнение для читаемости текста поверх фона */
+    .countdown-popup-bg::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(53, 74, 17, 0.6);
+    }
+
+/* Контент повез фона */
+.countdown-content {
+    position: relative;
+    z-index: 2;
 }
 
 .countdown-title {
@@ -620,18 +679,18 @@ h1 {
     left: 10%
 }
 
-.infinite-slide img {
-    width: 80%;
-    height: 80%
-    object-fit: cover;
-    display: block;
-}
+    .infinite-slide img {
+        width: 80%;
+        height: 80% object-fit: cover;
+        display: block;
+    }
 
 
 @keyframes scrollVertical {
     0% {
         transform: translateY(0);
     }
+
     100% {
         transform: translateY(-50%);
     }
@@ -642,6 +701,7 @@ h1 {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -674,7 +734,7 @@ h1 {
     .week-day {
         font-size: 0.7rem;
     }
-    
+
     .wedding-date::after {
         font-size: 3.5rem;
     }
@@ -682,16 +742,17 @@ h1 {
     .infinite-slide {
         flex: 0 0 100%;
     }
-    
-    .infinite-slide img {
-        width: 80%;
-        height: 80%;
-    }
+
+        .infinite-slide img {
+            width: 80%;
+            height: 80%;
+        }
 
     @keyframes scroll {
         0% {
             transform: translateX(0);
         }
+
         100% {
             transform: translateX(-800%);
         }
