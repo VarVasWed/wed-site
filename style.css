@@ -213,7 +213,7 @@ h1 {
         color: #354A11;
     }
 
-/* Ссылка на отель */
+/* РЎСЃС‹Р»РєР° РЅР° РѕС‚РµР»СЊ */
 .hotel-link {
     color: #354A11;
     text-decoration: none;
@@ -446,7 +446,7 @@ h1 {
         }
 }
 
-/* Time info - Блок с обратным отсчетом */
+/* Time info - Р‘Р»РѕРє СЃ РѕР±СЂР°С‚РЅС‹Рј РѕС‚СЃС‡РµС‚РѕРј */
 .countdown-section {
     position: relative;
     background: linear-gradient(135deg, #354A11 0%, #6D7F4F 100%);
@@ -459,7 +459,7 @@ h1 {
     overflow: hidden;
 }
 
-/* Всплывающий фон внутри блока countdown */
+/* Р’СЃРїР»С‹РІР°СЋС‰РёР№ С„РѕРЅ РІРЅСѓС‚СЂРё Р±Р»РѕРєР° countdown */
 .countdown-popup-bg {
     position: absolute;
     top: 0;
@@ -484,7 +484,7 @@ h1 {
         display: block;
     }
 
-    /* Затемнение для читаемости текста поверх фона */
+    /* Р—Р°С‚РµРјРЅРµРЅРёРµ РґР»СЏ С‡РёС‚Р°РµРјРѕСЃС‚Рё С‚РµРєСЃС‚Р° РїРѕРІРµСЂС… С„РѕРЅР° */
     .countdown-popup-bg::after {
         content: '';
         position: absolute;
@@ -495,7 +495,7 @@ h1 {
         background: rgba(53, 74, 17, 0.6);
     }
 
-/* Контент повез фона */
+/* РљРѕРЅС‚РµРЅС‚ РїРѕРІРµР· С„РѕРЅР° */
 .countdown-content {
     position: relative;
     z-index: 2;
@@ -568,7 +568,7 @@ h1 {
     }
 
     .countdown-value {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         padding: 8px 10px;
     }
 
@@ -681,7 +681,8 @@ h1 {
 
     .infinite-slide img {
         width: 80%;
-        height: 80% object-fit: cover;
+        height: 80%;
+        object-fit: cover;
         display: block;
     }
 
